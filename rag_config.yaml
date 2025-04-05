@@ -1,0 +1,4 @@
+rag_model: "sentence-transformers/all-MiniLM-L6-v2"
+gen_model: "gemini-1.5-flash"
+file_path: "/Users/abilaasha/Documents/GitHub/Abi Github/RAG implementation/data/Newwhitepaper_Agents2.pdf"
+top_k: 5

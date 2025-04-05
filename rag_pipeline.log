@@ -1,0 +1,52 @@
+2025-04-05 14:08:07,526 - ERROR - Error loading config file config/rag_config.yaml: [Errno 2] No such file or directory: 'config/rag_config.yaml'
+2025-04-05 14:09:18,649 - INFO - Successfully loaded config file: rag_config.yaml
+2025-04-05 14:09:18,649 - INFO - Initializing RAGPipeline...
+2025-04-05 14:09:18,699 - INFO - Use pytorch device_name: mps
+2025-04-05 14:09:18,699 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-04-05 14:10:24,630 - INFO - RAGPipeline initialized with models: sentence-transformers/all-MiniLM-L6-v2, gemini-1.5-flash
+2025-04-05 14:10:38,467 - INFO - User query: What is clinical query agent?
+2025-04-05 14:10:38,468 - INFO - Running RAGPipeline with file: /home/amit/Repositories/PythonStuffs/ArtificialIntelligence/RAGImplementation/data/corpus/pink_cat.pdf and top_k: 5
+2025-04-05 14:10:38,515 - ERROR - An error occurred: [Errno 2] No such file or directory: '/home/amit/Repositories/PythonStuffs/ArtificialIntelligence/RAGImplementation/data/corpus/pink_cat.pdf'
+Traceback (most recent call last):
+  File "/Users/abilaasha/Documents/GitHub/Abi Github/RAG implementation/main.py", line 54, in main
+    response = rag_pipeline.run(query, file_path, top_k)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/abilaasha/Documents/GitHub/Abi Github/RAG implementation/rag_pipeline.py", line 23, in run
+    self.retriever.index_documents(file_path)
+  File "/Users/abilaasha/Documents/GitHub/Abi Github/RAG implementation/retriever.py", line 15, in index_documents
+    raw_text = read_pdf(file_path)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/abilaasha/Documents/GitHub/Abi Github/RAG implementation/preprocessing.py", line 5, in read_pdf
+    reader = PdfReader(file_path)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/abilaasha/Documents/GitHub/Abi Github/RAG implementation/env/lib/python3.11/site-packages/PyPDF2/_reader.py", line 317, in __init__
+    with open(stream, "rb") as fh:
+         ^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/amit/Repositories/PythonStuffs/ArtificialIntelligence/RAGImplementation/data/corpus/pink_cat.pdf'
+2025-04-05 14:12:11,053 - INFO - Successfully loaded config file: rag_config.yaml
+2025-04-05 14:12:11,054 - INFO - Initializing RAGPipeline...
+2025-04-05 14:12:11,098 - INFO - Use pytorch device_name: mps
+2025-04-05 14:12:11,098 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-04-05 14:12:15,925 - INFO - RAGPipeline initialized with models: sentence-transformers/all-MiniLM-L6-v2, gemini-1.5-flash
+2025-04-05 14:12:26,737 - INFO - User query: What is clinical query agent?
+2025-04-05 14:12:26,738 - INFO - Running RAGPipeline with file: /Users/abilaasha/Documents/GitHub/Abi Github/RAG implementation/data/Clinical Query Agent FAQ.pdf and top_k: 5
+2025-04-05 14:12:30,947 - INFO - Pipeline response: Based on the provided text, a clinical query agent is an AI-powered, large language model (LLM) agent that extracts clinically relevant information from patient history and processes clinical information.  It aims to improve efficiency by surfacing essential information instantly as a clinical query is generated.
+
+2025-04-05 15:06:45,336 - INFO - Successfully loaded config file: rag_config.yaml
+2025-04-05 15:06:45,336 - INFO - Initializing RAGPipeline...
+2025-04-05 15:06:45,336 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-04-05 15:18:33,172 - INFO - Use pytorch device: cpu
+2025-04-05 15:18:33,173 - INFO - RAGPipeline initialized with models: sentence-transformers/all-MiniLM-L6-v2, gemini-1.5-flash
+2025-04-05 15:19:46,369 - INFO - User query: Can I skip answering the clinical query?
+2025-04-05 15:19:46,371 - INFO - Running RAGPipeline with file: /Users/abilaasha/Documents/GitHub/Abi Github/RAG implementation/data/Clinical Query Agent FAQ.pdf and top_k: 5
+2025-04-05 15:19:49,070 - INFO - Pipeline response: The provided text does not contain the answer to whether you can skip answering the clinical query.  The snippets discuss editing and customizing the query, but not skipping it entirely.
+
+2025-04-05 15:23:38,269 - INFO - Successfully loaded config file: rag_config.yaml
+2025-04-05 15:23:38,270 - INFO - Initializing RAGPipeline...
+2025-04-05 15:23:38,270 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-04-05 15:23:39,987 - INFO - Use pytorch device: cpu
+2025-04-05 15:23:39,987 - INFO - RAGPipeline initialized with models: sentence-transformers/all-MiniLM-L6-v2, gemini-1.5-flash
+2025-04-05 15:23:50,537 - INFO - User query: What is an agent?
+2025-04-05 15:23:50,538 - INFO - Running RAGPipeline with file: /Users/abilaasha/Documents/GitHub/Abi Github/RAG implementation/data/Newwhitepaper_Agents2.pdf and top_k: 5
+2025-04-05 15:23:54,739 - INFO - Pipeline response: Based on the provided text snippets, an agent is a fundamental concept,  and the text describes different aspects of agents including their capabilities (using tools or reasoning), prebuilt architectures, and how information about them can be summarized for users.  The snippets don't offer a concise definition, but suggest it's a complex concept with multiple facets.
+
