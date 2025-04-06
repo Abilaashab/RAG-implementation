@@ -97,14 +97,15 @@ Edit `rag_config.yaml` to control:
 ## 🚀 Usage
 
 1. Put your documents inside the `data/` folder.
-2. Open your terminal and run:
+2. Copy the path of your document and replace it in the rag_config file.
+3. Open your terminal and run:
 
 ```bash
 python main.py
 ```
 
-3. Enter your query when prompted.
-4. The model will retrieve context, generate an answer, and show the result.
+4. Enter your query when prompted.
+5. The model will retrieve context, generate an answer, and show the result.
 
 ---
 
